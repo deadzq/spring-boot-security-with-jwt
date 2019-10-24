@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.mzlion:easy-okhttp:1.0.7-beta">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mzlion/easy-okhttp/1.0.7-beta/easy-okhttp-1.0.7-beta.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mzlion/easy-okhttp/1.0.7-beta/easy-okhttp-1.0.7-beta-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mzlion/easy-okhttp/1.0.7-beta/easy-okhttp-1.0.7-beta-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

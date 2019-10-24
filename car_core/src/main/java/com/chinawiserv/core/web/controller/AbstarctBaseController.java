@@ -23,14 +23,11 @@ public abstract class AbstarctBaseController<T extends Serializable> implements 
 
     Logger log = LoggerFactory.getLogger(AbstarctBaseController.class);
 
-
     public static final int DEFAULT_PAGE_SIZE = 15;
     public static final int DEFAULT_PAGE_NUM = 1;
 
-
     public static final String SUCESS = "success";
     public static final String ERROR = "error";
-
 
     //防止重复提交
     public static final String POST_TOKEN = "postToken";
@@ -54,7 +51,6 @@ public abstract class AbstarctBaseController<T extends Serializable> implements 
         this.entityClass = ReflectUtils.findParameterizedType(getClass(), 0);
         setViewPrefix(defaultViewPrefix());
     }
-
 
     /**
      * 当前模块 视图的前缀
@@ -83,7 +79,7 @@ public abstract class AbstarctBaseController<T extends Serializable> implements 
 
     /**
      * 获取视图名称：即prefixViewName + "/" + suffixName
-     *
+     * 视图跳转
      * @return
      */
     public String viewName(String suffixName) {
@@ -108,7 +104,7 @@ public abstract class AbstarctBaseController<T extends Serializable> implements 
     }
 
     /**
-     * @param backURL null 将重定向到默认getViewPrefix()
+     * @param backURL null 将重定向到默认getViewPrefix()  页面跳转
      * @return
      */
     protected String redirectToUrl(String backURL) {

@@ -44,7 +44,6 @@ public class UserController extends BaseCRUDController<User> {
         return user;
     }
 
-
     private List<Person> persons = new ArrayList<>();
 
     private void add() {

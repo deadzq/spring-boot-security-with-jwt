@@ -38,7 +38,6 @@ import java.util.Map;
 @Service
 public interface IService<T extends Serializable> {
 
-
     /**
      * 根据实体中的属性进行查询，只能有一个返回值，有多个结果是抛出异常，查询条件使用等号
      *
@@ -103,7 +102,6 @@ public interface IService<T extends Serializable> {
      */
     int selectCountByExample(Example example);
 
-
     /**
      * 根据Condition条件进行查询
      *
@@ -119,7 +117,6 @@ public interface IService<T extends Serializable> {
      */
     int selectCountByCondition(Condition condition);
 
-
     /**
      * 保存一个实体，null的属性也会保存，不会使用数据库默认值
      *
@@ -129,7 +126,7 @@ public interface IService<T extends Serializable> {
     int insert(T entity);
 
     /**
-     * 保存一个实体，null的属性不会保存，会使用数据库默认值
+     * 保存一个实体，null的属性不会保存，会使用数据库默认值 动态插入
      *
      * @param entity
      * @return
@@ -154,7 +151,6 @@ public interface IService<T extends Serializable> {
      */
     int insertUseGeneratedKeys(T entity);
 
-
     /**
      * 根据主键更新实体全部字段，null值会被更新
      *
@@ -164,7 +160,7 @@ public interface IService<T extends Serializable> {
     int updateByPrimaryKey(T entity);
 
     /**
-     * 根据主键更新属性不为null的值
+     * 根据主键更新属性不为null的值 动态更新
      *
      * @param entity
      * @return
@@ -275,7 +271,6 @@ public interface IService<T extends Serializable> {
     public List<T> selectByMap(Class<T> entityClass, Map<String, Object> map);
 
     public List<T> selectByProperty(Class<T> entityClass, String key, Object val);
-
 
 
 }

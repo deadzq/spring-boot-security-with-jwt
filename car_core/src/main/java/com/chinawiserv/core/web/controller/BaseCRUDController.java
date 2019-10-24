@@ -26,7 +26,6 @@ import java.util.Map;
  */
 public abstract class BaseCRUDController<T extends Serializable> extends AbstarctBaseController {
 
-
     @Autowired
     public MessageSource message;
 
@@ -45,9 +44,7 @@ public abstract class BaseCRUDController<T extends Serializable> extends Abstarc
         currentRequest.set(request);
         currentResponse.set(response);
     }
-
 //
-
     /**
      * 线程安全
      */
@@ -62,7 +59,6 @@ public abstract class BaseCRUDController<T extends Serializable> extends Abstarc
         return (HttpServletRequest) currentRequest.get();
     }
 
-
     /**
      * 得到ModelAndView
      *
@@ -71,7 +67,6 @@ public abstract class BaseCRUDController<T extends Serializable> extends Abstarc
     public ModelAndView getModelAndView() {
         return new ModelAndView();
     }
-
 
     /**
      * 添加Model消息
@@ -153,7 +148,7 @@ public abstract class BaseCRUDController<T extends Serializable> extends Abstarc
         return parameters;
     }
 
-
+    //分页
     public synchronized void doPaginationOther(Integer pageNum,Integer pageSize) {
         pageNum = pageNum != null ? Integer.valueOf(pageNum) : 1; //从第几条数据开始检索
         pageSize = pageSize != null ? Integer.valueOf(pageSize) : 15; //从第几条数据开始检索
@@ -165,7 +160,6 @@ public abstract class BaseCRUDController<T extends Serializable> extends Abstarc
         PageHelper.startPage(pageNum, pageSize, true);
     }
 
-
     public synchronized JSONObject getReturnJson(List<Map<String, Object>> dataList) {
         JSONObject jsonObject = new JSONObject();
         PageInfo pageInfo = new PageInfo<>(dataList);
@@ -176,7 +170,6 @@ public abstract class BaseCRUDController<T extends Serializable> extends Abstarc
         jsonObject.put("current_page", pageInfo.getPageNum());
         return jsonObject;
     }
-
 
     public synchronized void doPagination(Map<String, Object> params) {
         HttpServletRequest request = getRequest();
@@ -192,7 +185,6 @@ public abstract class BaseCRUDController<T extends Serializable> extends Abstarc
         params.put("pageNum", pageNum);
         params.put("pageSize", pageSize);
     }
-
 
     public String underscoreName(String camelCaseName) {
         StringBuilder result = new StringBuilder();
@@ -210,7 +202,6 @@ public abstract class BaseCRUDController<T extends Serializable> extends Abstarc
         }
         return result.toString();
     }
-
 
     /**
      * 设置cookie

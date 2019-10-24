@@ -69,13 +69,13 @@
             <version>${druid.version}</version>
         </dependency>
 
+        <!--MySQL依赖-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+
     </dependencies>
-
-
 
     <!-- 环境设置 -->
     <profiles>
@@ -102,8 +102,6 @@
         </profile>
     </profiles>
 
-
-
     <build>
         <resources>
 
@@ -118,7 +116,6 @@
                 </includes>
             </resource>
         </resources>
-
 
         <plugins>
             <!-- 添加spring-boot的maven插件 start-->
@@ -141,7 +138,6 @@
             </plugin>
             <!-- 添加spring-boot的maven插件 end-->
 
-
             <!--设置maven-war-plugins插件，否则外部依赖 system scope 无法打进war包-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -160,8 +156,6 @@
                     </webResources>
                 </configuration>
             </plugin>
-
-
 
         </plugins>
     </build>

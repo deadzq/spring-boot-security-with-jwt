@@ -54,18 +54,15 @@ public class BaseService<T extends Serializable> implements IService<T> {
         return mapper.selectCount(t);
     }
 
-
     @Override
     public List<T> selectByExample(Example example) {
         return mapper.selectByExample(example);
     }
 
-
     @Override
     public int selectCountByExample(Example example) {
         return mapper.selectCountByExample(example);
     }
-
 
     @Override
     public List<T> selectByCondition(Condition condition) {
@@ -82,12 +79,10 @@ public class BaseService<T extends Serializable> implements IService<T> {
         return mapper.insert(entity);
     }
 
-
     @Override
     public int insertSelective(T t) {
         return mapper.insertSelective(t);
     }
-
 
     @Override
     public int insertList(List<T> entityList) {
@@ -99,7 +94,6 @@ public class BaseService<T extends Serializable> implements IService<T> {
         return mapper.insertUseGeneratedKeys(entity);
     }
 
-
     @Override
     public int updateByPrimaryKey(T entity) {
         return mapper.updateByPrimaryKey(entity);
@@ -109,7 +103,6 @@ public class BaseService<T extends Serializable> implements IService<T> {
     public int updateByPrimaryKeySelective(T entity) {
         return mapper.updateByPrimaryKeySelective(entity);
     }
-
 
     @Override
     public int updateByExample(T entity, Example example) {
@@ -131,12 +124,10 @@ public class BaseService<T extends Serializable> implements IService<T> {
         return mapper.updateByConditionSelective(entity, condition);
     }
 
-
     @Override
     public int delete(T entity) {
         return mapper.delete(entity);
     }
-
 
     @Override
     public int deleteByPrimaryKey(Object key) {
@@ -157,7 +148,6 @@ public class BaseService<T extends Serializable> implements IService<T> {
     public int deleteByCondition(Condition condition) {
         return mapper.deleteByCondition(condition);
     }
-
 
     @Override
     public T selectOneByProperty(Class<T> entityClass, String property, Object value) {

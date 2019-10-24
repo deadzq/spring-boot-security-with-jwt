@@ -6,6 +6,4 @@ package com.chinawiserv.core.web.controller;
 public interface BaseController {
 
 
-
-
 }
